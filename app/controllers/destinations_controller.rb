@@ -17,7 +17,7 @@ class DestinationsController < ApplicationController
     @destination = Destination.new(destination_params)
 
     if @destination.save
-      render json: @destination, status: :created, location: @destination
+      render json: @destination, status: :created
     else
       render json: @destination.errors, status: :unprocessable_entity
     end
